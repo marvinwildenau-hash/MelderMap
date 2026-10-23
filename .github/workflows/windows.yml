@@ -1,5 +1,5 @@
 # Baut MelderMap als Windows-Programm (Installer) und legt es unter Releases ab.
-# Start: Tag v<Version> pushen (scripts/release-desktop.sh) oder von Hand unter Actions.
+# Start: scripts/release-desktop.sh oder von Hand unter Actions → Windows-App → Run workflow.
 name: Windows-App
 on:
   workflow_dispatch:
@@ -20,16 +20,20 @@ jobs:
         with:
           workspaces: desktop/src-tauri
       - name: App-Datei bereitstellen
+        id: v
         shell: bash
-        run: mkdir -p desktop/dist && cp docs/index.html desktop/dist/index.html
+        run: |
+          mkdir -p desktop/dist && cp docs/index.html desktop/dist/index.html
+          echo "tag=v$(node -p "require('./desktop/src-tauri/tauri.conf.json').version")" >> "$GITHUB_OUTPUT"
       - name: Programm bauen
         working-directory: desktop/src-tauri
         run: npx --yes @tauri-apps/cli@2 build
       - name: Unter Releases ablegen
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref_type == 'tag' && github.ref_name || 'windows-test' }}
-          name: MelderMap ${{ github.ref_type == 'tag' && github.ref_name || 'Testbau' }} für Windows
+          tag_name: ${{ steps.v.outputs.tag }}
+          name: MelderMap ${{ steps.v.outputs.tag }} für Windows
+          make_latest: true
           body: |
             Installer für Windows 10 und 11. Herunterladen, doppelklicken, fertig.
             Beim ersten Start zeigt Windows eventuell „Der Computer wurde durch Windows geschützt“: „Weitere Informationen“ und dann „Trotzdem ausführen“ wählen.
