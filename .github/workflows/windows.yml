@@ -1,0 +1,36 @@
+# Baut MelderMap als Windows-Programm (Installer) und legt es unter Releases ab.
+# Start: Tag v<Version> pushen (scripts/release-desktop.sh) oder von Hand unter Actions.
+name: Windows-App
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: desktop/src-tauri
+      - name: App-Datei bereitstellen
+        shell: bash
+        run: mkdir -p desktop/dist && cp docs/index.html desktop/dist/index.html
+      - name: Programm bauen
+        working-directory: desktop/src-tauri
+        run: npx --yes @tauri-apps/cli@2 build
+      - name: Unter Releases ablegen
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_type == 'tag' && github.ref_name || 'windows-test' }}
+          name: MelderMap ${{ github.ref_type == 'tag' && github.ref_name || 'Testbau' }} für Windows
+          body: |
+            Installer für Windows 10 und 11. Herunterladen, doppelklicken, fertig.
+            Beim ersten Start zeigt Windows eventuell „Der Computer wurde durch Windows geschützt“: „Weitere Informationen“ und dann „Trotzdem ausführen“ wählen.
+          files: desktop/src-tauri/target/release/bundle/nsis/*.exe
