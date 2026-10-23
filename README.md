@@ -2,7 +2,7 @@
 
 Offline-App für die Melderprüfung an Brandmeldeanlagen: Melderprüfliste laden, Laufweg nach Laufkarten, abhaken, Ereignisspeicher abgleichen, Quartal eintragen.
 
-App öffnen: https://marvinwildenau-hash.github.io/wildmaps-app/
+App öffnen: https://marvinwildenau-hash.github.io/MelderMap/
 
 Alle Daten bleiben auf dem Gerät. Nichts wird hochgeladen.
 
