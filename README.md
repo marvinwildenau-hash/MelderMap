@@ -1,4 +1,4 @@
-# Wildmaps
+# Wilro – Wildenau Route
 
 Offline-App für die Melderprüfung an Brandmeldeanlagen: Melderprüfliste laden, Laufweg nach Laufkarten, abhaken, Ereignisspeicher abgleichen, Quartal eintragen.
 
