@@ -1,6 +1,6 @@
 // Offline-Cache: die App liegt komplett in index.html
-const C="meldermap-1.10.0-1792777553285";
-const FILES=["./","index.html","manifest.webmanifest","icon-192.png","icon-512.png"];
+const C="meldermap-1.10.0-1792777611604";
+const FILES=["./","index.html","manifest.webmanifest","icon-192.png","icon-512.png","apple-touch-icon.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C&&k!=="meldermap-inbox").map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 // Android „Teilen → MelderMap“: Datei ablegen, App liest sie beim Start (?inbox=1)
