@@ -1,6 +1,6 @@
 {
- "name": "Wilro – Wildenau Route",
- "short_name": "Wilro",
+ "name": "MelderMap by Wildenau",
+ "short_name": "MelderMap",
  "description": "Melderprüfung nach Laufweg, offline",
  "start_url": "./",
  "scope": "./",
