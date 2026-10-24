@@ -9,14 +9,32 @@ async fn update_check(app: tauri::AppHandle) -> Result<Option<String>, String> {
     Ok(up.check().await.map_err(|e| e.to_string())?.map(|u| u.version))
 }
 
-// Update laden, Signatur prüfen und installieren; danach startet die neue Version
+// Update laden und Signatur prüfen; danach beendet sich das Programm und der Installer läuft (startet MelderMap neu)
 #[tauri::command]
 async fn update_install(app: tauri::AppHandle) -> Result<(), String> {
     let up = app.updater().map_err(|e| e.to_string())?;
-    if let Some(u) = up.check().await.map_err(|e| e.to_string())? {
-        u.download_and_install(|_, _| {}, || {}).await.map_err(|e| e.to_string())?;
-        app.restart();
-    }
+    let Some(u) = up.check().await.map_err(|e| e.to_string())? else { return Ok(()) };
+    let bytes = u.download(|_, _| {}, || {}).await.map_err(|e| e.to_string())?;
+    install_later(&bytes, &u.version).map_err(|e| e.to_string())?;
+    app.exit(0);
+    Ok(())
+}
+
+// Installer erst starten, wenn MelderMap schon beendet ist. Startet er sofort, findet er das laufende
+// Programm und bricht mit „Failed to kill MelderMap“ ab.
+#[cfg(windows)]
+fn install_later(bytes: &[u8], version: &str) -> std::io::Result<()> {
+    use std::os::windows::process::CommandExt;
+    let path = std::env::temp_dir().join(format!("MelderMap_{version}_update.exe"));
+    std::fs::write(&path, bytes)?;
+    std::process::Command::new("cmd")
+        .raw_arg(format!("/C \"ping -n 4 127.0.0.1 >nul & start \"\" \"{}\" /P /UPDATE /R\"", path.display()))
+        .creation_flags(0x0800_0000) // kein Konsolenfenster
+        .spawn()?;
+    Ok(())
+}
+#[cfg(not(windows))]
+fn install_later(_: &[u8], _: &str) -> std::io::Result<()> {
     Ok(())
 }
 

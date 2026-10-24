@@ -1,5 +1,5 @@
 // Offline-Cache: die App liegt komplett in index.html
-const C="meldermap-1.15.2-1792826624011";
+const C="meldermap-1.15.3-1792827098565";
 const FILES=["./","index.html","manifest.webmanifest","icon-192.png","icon-512.png","maskable-192.png","maskable-512.png","apple-touch-icon.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C&&k!=="meldermap-inbox").map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
