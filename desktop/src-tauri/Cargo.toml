@@ -1,6 +1,6 @@
 [package]
 name = "meldermap"
-version = "1.14.0"
+version = "1.14.1"
 description = "MelderMap by Wildenau"
 authors = ["Marvin Wildenau"]
 edition = "2021"
