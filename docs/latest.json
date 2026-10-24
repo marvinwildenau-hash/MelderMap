@@ -1,11 +1,11 @@
 {
-  "version": "1.15.4",
-  "notes": "MelderMap 1.15.4",
-  "pub_date": "2026-10-24T07:45:30Z",
+  "version": "1.16.0",
+  "notes": "MelderMap 1.16.0",
+  "pub_date": "2026-10-24T08:08:50Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRV3dmTHlsQlV2Rzg1cHArekJJOTVLM1JlMzNsZ1NyYTZhdlpIRVBUdmVzTitHVmhTUk5BSWFBK0ZsTHVZbnhvVDI0R29oVTBEd2dmM1B0U3pKa0hva3VuUjB0djljUUEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyODI3OTMwCWZpbGU6TWVsZGVyTWFwXzEuMTUuNF94NjQtc2V0dXAuZXhlCmRQbTZFV2hhRHZvQU5yUGY3WWo2UG9jMGljZmhRbERxdUFFc3Z1dnp0S01CM09NMDdyRy9oU1VSY3VoVDBpaWttMWx5bEN0S1QzcU1QYmk5YW5UeEN3PT0K",
-      "url": "https://github.com/marvinwildenau-hash/MelderMap/releases/download/v1.15.4/MelderMap_1.15.4_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRV3dmTHlsQlV2RzVDRk9tVnBSTkt0V3ROQkJLSUxJWEhKMGV4VlpBY2F4TTlVL3Q5RithUVhKSnNXK0lSaUIvZjQvamFRSUFoazBsUTA3U0JCOFBXbkxGQnpXLy9SZmdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyODI5MzMwCWZpbGU6TWVsZGVyTWFwXzEuMTYuMF94NjQtc2V0dXAuZXhlCkJPWk1hbGlzZjdJQ3dNNVc0L3Y3WlMrbysvcGd0TDNSRUpWMHUvMG8xdEhieVVqcTdncHpGcHgxL2FFVUczc25UbGdtWExBdEp0Zzd5cW5MbUFRK0J3PT0K",
+      "url": "https://github.com/marvinwildenau-hash/MelderMap/releases/download/v1.16.0/MelderMap_1.16.0_x64-setup.exe"
     }
   }
 }
