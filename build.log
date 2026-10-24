@@ -1,0 +1,118 @@
+        Info Looking up installed tauri packages to check mismatched versions...
+[1m[92m    Updating[0m crates.io index
+[1m[92m Downloading[0m crates ...
+[1m[92m  Downloaded[0m base64 v0.22.1
+[1m[92m  Downloaded[0m getrandom v0.2.17
+[1m[92m  Downloaded[0m hyper-rustls v0.27.10
+[1m[92m  Downloaded[0m minisign-verify v0.3.0
+[1m[92m  Downloaded[0m ring v0.17.14
+[1m[92m  Downloaded[0m rustls-webpki v0.103.16
+[1m[92m  Downloaded[0m rustls-pki-types v1.15.1
+[1m[92m  Downloaded[0m rustls-platform-verifier v0.7.1
+[1m[92m  Downloaded[0m rustls v0.23.46
+[1m[92m  Downloaded[0m subtle v2.6.1
+[1m[92m  Downloaded[0m tauri-plugin v2.7.2
+[1m[92m  Downloaded[0m tauri-plugin-updater v2.14.0
+[1m[92m  Downloaded[0m tempfile v3.27.0
+[1m[92m  Downloaded[0m tokio-rustls v0.26.6
+[1m[92m  Downloaded[0m untrusted v0.9.0
+[1m[92m  Downloaded[0m windows-registry v0.6.1
+[1m[92m  Downloaded[0m zeroize v1.9.1
+[1m[92m  Downloaded[0m zip v4.6.1
+[1m[92m   Compiling[0m windows-sys v0.61.2
+[1m[92m   Compiling[0m smallvec v1.16.4
+[1m[92m   Compiling[0m futures-core v0.3.34
+[1m[92m   Compiling[0m ring v0.17.14
+[1m[92m   Compiling[0m icu_normalizer v2.4.0
+[1m[92m   Compiling[0m tracing-core v0.1.36
+[1m[92m   Compiling[0m idna_adapter v1.2.2
+[1m[92m   Compiling[0m getrandom v0.2.17
+[1m[92m   Compiling[0m idna v1.1.0
+[1m[92m   Compiling[0m zeroize v1.9.1
+[1m[92m   Compiling[0m mio v1.2.4
+[1m[92m   Compiling[0m socket2 v0.6.5
+[1m[92m   Compiling[0m tokio v1.54.1
+[1m[92m   Compiling[0m url v2.5.8
+[1m[92m   Compiling[0m untrusted v0.9.0
+[1m[92m   Compiling[0m rustls-pki-types v1.15.1
+[1m[92m   Compiling[0m winapi-util v0.1.11
+[1m[92m   Compiling[0m tracing v0.1.44
+[1m[92m   Compiling[0m http-body v1.1.0
+[1m[92m   Compiling[0m futures-macro v0.3.34
+[1m[92m   Compiling[0m httparse v1.10.1
+[1m[92m   Compiling[0m rustls v0.23.46
+[1m[92m   Compiling[0m slab v0.4.12
+[1m[92m   Compiling[0m futures-task v0.3.34
+[1m[92m   Compiling[0m same-file v1.0.6
+[1m[92m   Compiling[0m tower-service v0.3.3
+[1m[92m   Compiling[0m subtle v2.6.1
+[1m[92m   Compiling[0m futures-util v0.3.34
+[1m[92m   Compiling[0m try-lock v0.2.5
+[1m[92m   Compiling[0m want v0.3.2
+[1m[92m   Compiling[0m parking_lot_core v0.9.12
+[1m[92m   Compiling[0m urlpattern v0.6.0
+[1m[92m   Compiling[0m walkdir v2.5.0
+[1m[92m   Compiling[0m semver v1.0.28
+[1m[92m   Compiling[0m atomic-waker v1.1.2
+[1m[92m   Compiling[0m hyper v1.12.0
+[1m[92m   Compiling[0m tauri-utils v2.10.2
+[1m[92m   Compiling[0m rustls-webpki v0.103.16
+[1m[92m   Compiling[0m parking_lot v0.12.5
+[1m[92m   Compiling[0m sync_wrapper v1.0.2
+[1m[92m   Compiling[0m futures-channel v0.3.34
+[1m[92m   Compiling[0m tauri-plugin v2.7.2
+[1m[92m   Compiling[0m windows-registry v0.6.1
+[1m[92m   Compiling[0m tower-layer v0.3.3
+[1m[92m   Compiling[0m ipnet v2.12.2
+[1m[92m   Compiling[0m tower v0.5.3
+[1m[92m   Compiling[0m hyper-util v0.1.21
+[1m[92m   Compiling[0m tao v0.37.2
+[1m[92m   Compiling[0m tauri-runtime v2.12.2
+[1m[92m   Compiling[0m tokio-rustls v0.26.6
+[1m[92m   Compiling[0m dirs-sys v0.5.0
+[1m[92m   Compiling[0m tauri-plugin-updater v2.14.0
+[1m[92m   Compiling[0m softbuffer v0.4.8
+[1m[92m   Compiling[0m crc32fast v1.5.3
+[1m[92m   Compiling[0m getrandom v0.4.3
+[1m[92m   Compiling[0m futures-sink v0.3.34
+[1m[92m   Compiling[0m tokio-util v0.7.20
+[1m[92m   Compiling[0m muda v0.20.0
+[1m[92m   Compiling[0m tauri-runtime-wry v2.12.3
+[1m[92m   Compiling[0m dirs v7.0.0
+[1m[92m   Compiling[0m hyper-rustls v0.27.10
+[1m[92m   Compiling[0m rustls-platform-verifier v0.7.1
+[1m[92m   Compiling[0m tower-http v0.6.11
+[1m[92m   Compiling[0m window-vibrancy v0.8.1
+[1m[92m   Compiling[0m http-body-util v0.1.5
+[1m[92m   Compiling[0m fastrand v2.5.0
+[1m[92m   Compiling[0m tauri v2.12.5
+[1m[92m   Compiling[0m tempfile v3.27.0
+[1m[92m   Compiling[0m reqwest v0.13.5
+[1m[92m   Compiling[0m zip v4.6.1
+[1m[92m   Compiling[0m meldermap v1.15.1 (D:\a\MelderMap\MelderMap\desktop\src-tauri)
+[1m[92m   Compiling[0m minisign-verify v0.3.0
+[1m[92m   Compiling[0m base64 v0.22.1
+[1m[91merror[E0433][0m[1m[97m: cannot find `serde_json` in the list of imported crates[0m
+  [1m[96m--> [0msrc\main.rs:27:14
+   [1m[96m|[0m
+[1m[96m27[0m [1m[96m|[0m         .run(tauri::generate_context!())
+   [1m[96m|[0m              [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1m[91mcould not find `serde_json` in the list of imported crates[0m
+   [1m[96m|[0m
+   [1m[96m= [0m[1m[97mnote[0m: this error originates in the macro `tauri::generate_context` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+[1m[91merror[E0433][0m[1m[97m: cannot find `serde_json` in the list of imported crates[0m
+  [1m[96m--> [0msrc\main.rs:27:14
+   [1m[96m|[0m
+[1m[96m27[0m [1m[96m|[0m         .run(tauri::generate_context!())
+   [1m[96m|[0m              [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1m[91mcould not find `serde_json` in the list of imported crates[0m
+   [1m[96m|[0m
+   [1m[96m= [0m[1m[97mnote[0m: this error originates in the macro `tauri::generate_context` (in Nightly builds, run with -Z macro-backtrace for more info)
+[1m[96mhelp[0m: consider importing this struct
+   [1m[96m|[0m
+[1m[96m 3[0m [92m+ use std::iter::Map;[0m
+   [1m[96m|[0m
+
+[1m[97mFor more information about this error, try `rustc --explain E0433`.[0m
+[1m[91merror[0m: could not compile `meldermap` (bin "meldermap") due to 2 previous errors
+failed to build app: failed to build app
+       Error failed to build app: failed to build app
