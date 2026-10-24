@@ -1,0 +1,11 @@
+{
+  "version": "1.15.1",
+  "notes": "MelderMap 1.15.1",
+  "pub_date": "2026-10-24T07:15:39Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRV3dmTHlsQlV2R3o5REVSUTVGQjg1NlQwc2RmS2laL0dLZWJLbHl3Qk5YaitoandKd2x3Ti81cUw2cVdYUHVpeEgyZU9relU1L1d2YkZzSTRpOXc5U2Z0T1Z1cDFjNWdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyODI2MTM5CWZpbGU6TWVsZGVyTWFwXzEuMTUuMV94NjQtc2V0dXAuZXhlCmZ3ZGtDNUlNTFdlWFp2bFhiMmJ3eklyNFlEZHZkR0k3VVBoMGdFMXIydEFiQ0dsWGpTdjFGR28wRkpRdGU1ckFZUnJIRVUxWVUwQjEzY1RsMjBmckFBPT0K",
+      "url": "https://github.com/marvinwildenau-hash/MelderMap/releases/download/v1.15.1/MelderMap_1.15.1_x64-setup.exe"
+    }
+  }
+}
