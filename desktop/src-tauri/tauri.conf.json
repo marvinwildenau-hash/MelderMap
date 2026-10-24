@@ -1,21 +1,61 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "MelderMap",
-  "version": "1.15.0",
+  "version": "1.15.1",
   "identifier": "de.wildenau.meldermap",
-  "build": { "frontendDist": "../dist" },
+  "build": {
+    "frontendDist": "../dist"
+  },
   "app": {
-    "windows": [{ "title": "MelderMap", "width": 1400, "height": 900, "minWidth": 900, "minHeight": 600, "center": true }],
-    "security": { "csp": null }
+    "windows": [
+      {
+        "title": "MelderMap",
+        "width": 1400,
+        "height": 900,
+        "minWidth": 900,
+        "minHeight": 600,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "withGlobalTauri": true
   },
   "bundle": {
     "active": true,
-    "targets": ["nsis"],
+    "targets": [
+      "nsis"
+    ],
     "publisher": "Marvin Wildenau",
     "copyright": "© 2026 Marvin Wildenau",
     "category": "Business",
     "shortDescription": "Melderprüfung nach Laufweg",
-    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.ico", "icons/icon.png"],
-    "windows": { "nsis": { "languages": ["German"], "installMode": "currentUser" } }
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico",
+      "icons/icon.png"
+    ],
+    "windows": {
+      "nsis": {
+        "languages": [
+          "German"
+        ],
+        "installMode": "currentUser"
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFCMkYxNTk0RjJGMkMxMTYKUldRV3dmTHlsQlV2RzM0RFM2OXBZUzBxUytaNHkxUGJmNGtLSTVxUFhkY2pkaWVnelpidW9ORVcK",
+      "endpoints": [
+        "https://marvinwildenau-hash.github.io/MelderMap/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
   }
 }
