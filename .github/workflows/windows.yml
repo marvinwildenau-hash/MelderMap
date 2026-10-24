@@ -30,7 +30,8 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          npx --yes @tauri-apps/cli@2 build 2>&1 | tee "$RUNNER_TEMP/build.log"
+          # CLI 2.11.4 fest: ab 2.12 bricht der Installer beim Update oft mit „Failed to kill <App>“ ab (tauri-apps/tauri#16277)
+          npx --yes @tauri-apps/cli@2.11.4 build 2>&1 | tee "$RUNNER_TEMP/build.log"
       # Bei einem Fehler das Bau-Protokoll in den Zweig build-log legen (die Protokolle von Actions sind nicht überall lesbar)
       - name: Fehlerprotokoll ablegen
         if: failure()
