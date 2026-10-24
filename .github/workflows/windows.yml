@@ -27,7 +27,19 @@ jobs:
           echo "tag=v$(node -p "require('./desktop/src-tauri/tauri.conf.json').version")" >> "$GITHUB_OUTPUT"
       - name: Programm bauen
         working-directory: desktop/src-tauri
-        run: npx --yes @tauri-apps/cli@2 build
+        shell: bash
+        run: |
+          set -o pipefail
+          npx --yes @tauri-apps/cli@2 build 2>&1 | tee "$RUNNER_TEMP/build.log"
+      # Bei einem Fehler das Bau-Protokoll in den Zweig build-log legen (die Protokolle von Actions sind nicht überall lesbar)
+      - name: Fehlerprotokoll ablegen
+        if: failure()
+        shell: bash
+        run: |
+          tail -c 60000 "$RUNNER_TEMP/build.log" > "$RUNNER_TEMP/tail.log" || echo "kein Protokoll" > "$RUNNER_TEMP/tail.log"
+          git config user.name "build" && git config user.email "build@users.noreply.github.com"
+          git checkout --orphan build-log && git rm -rqf --cached . && cp "$RUNNER_TEMP/tail.log" build.log
+          git add build.log && git commit -qm "Bau-Protokoll ${{ github.run_id }}" && git push -f origin build-log
       - name: Unter Releases ablegen
         uses: softprops/action-gh-release@v2
         with:
